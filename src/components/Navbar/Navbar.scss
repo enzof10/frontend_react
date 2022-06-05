@@ -20,7 +20,7 @@
             opacity: 0;
             transform: translateY(-250px);
         }
-    
+
         100% {
             opacity: 1;
             transform: translateY(0);
@@ -62,7 +62,7 @@
             opacity: 0;
             transform: translateY(-250px);
         }
-    
+
         100% {
             opacity: 1;
             transform: translateY(0);
@@ -151,9 +151,13 @@
         flex-direction: column;
 
         background: url('../../assets/bgWhite.png');
-        background-color: var(--white-color);
         background-size: cover;
         background-repeat: repeat;
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(255, 251, 251, 0.8);
+
 
         box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
         transition: all 0.7s ease;
@@ -181,12 +185,15 @@
 
         li {
             margin: 1rem;
-            
+
+
             a {
                 cursor: pointer;
 
+
                 color: var(--gray-color);
                 text-decoration: none;
+
                 font-size: 1rem;
                 text-transform: uppercase;
                 font-weight: 500;
@@ -196,6 +203,21 @@
                 &:hover {
                     color: var(--secondary-color);
                 }
+
+                &::after {
+                    color: var(--secondary-color);
+                    content: '';
+                    width: 0px;
+                    height: 1px;
+                    display: block;
+                    color: var(--secondary-color);
+                    background: var(--secondary-color);
+                    transition: 300ms;
+                  }
+                  
+                  &:hover::after {
+                    width: 100%;
+                  }
 
             }
         }

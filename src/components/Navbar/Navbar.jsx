@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import "./Navbar.scss";
 import { images } from "../../constants";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { motion } from "framer-motion";
 
 const Navbar = () => {
   const sections = [
     "home",
     "about",
-    "contact",
     "work",
     "skills",
     "testimonial",
+    "contact",
   ];
   const [toggle, setToggle] = useState(false);
   return (
@@ -28,7 +27,7 @@ const Navbar = () => {
         ))}
       </ul>
       <div className="app__navbar-menu">
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
+        <HiMenuAlt4 onClick={() => setToggle(true)} style={{display : toggle ?  "none": ""}} />
         <div className={toggle ? "show" : "hide"}>
           <HiX onClick={() => setToggle(false)} />
           <ul>

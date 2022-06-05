@@ -5,9 +5,9 @@ const NavigationDots = ({ active }) => {
     "home",
     "about",
     "work",
-    "contact",
     "skills",
     "testimonial",
+    "contact",
   ];
   return (
     <div className="app__navigation">
