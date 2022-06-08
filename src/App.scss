@@ -17,6 +17,9 @@
   
     display: flex;
     flex-direction: row;
+
+    position: relative;
+
   }
   
   .app__flex {
@@ -105,7 +108,7 @@
   
     padding: 1rem;
   
-    div {
+    a{
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -189,9 +192,9 @@
       display: none;
     }
     .app__social{
-      display: none;
       position: absolute;
-      margin-bottom: 1px;
+      min-height: 100vh;
+      bottom: 0;
     }
   
     .copyright {
